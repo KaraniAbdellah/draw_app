@@ -1,0 +1,7 @@
+// start elzero course about canvas
+// start building projects:
+    start with build GUI
+    start js with canvas
+    start build login with DOOOOOOB
+ 
+
