@@ -1,7 +1,3 @@
-// start elzero course about canvas
-// start building projects:
-    start with build GUI
-    start js with canvas
-    start build login with DOOOOOOB
- 
+// Build a login: https://youtu.be/NBXn6A5lcLU?si=pEi9WZ7bZgSiyFbQ
+// Build a GUI Draw App: https://youtu.be/y84tBZo8GFo?si=1GSKTVfKgrEzRjCA
 
