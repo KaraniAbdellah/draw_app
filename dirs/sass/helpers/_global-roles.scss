@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Roboto", serif;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -23,3 +27,7 @@ ul {
     list-style: none;
 }
 
+input:focus {
+    border: 0;
+    outline: 0;
+}
