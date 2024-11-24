@@ -1,0 +1,137 @@
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.danger {
+  border-color: #FF3B30 !important;
+}
+
+.success {
+  border-color: #28A745 !important;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a, label {
+  display: block;
+  cursor: pointer;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+input:focus {
+  border: 0;
+  outline: 0;
+}
+
+.container {
+  background-color: rgb(86, 86, 255);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  background-color: white;
+  padding: 20px;
+  width: 350px;
+  border-radius: 5px;
+}
+.login .icon {
+  text-align: center;
+  font-size: 100px;
+  margin-bottom: 20px;
+}
+.login div.email, .login div.password, .login div.name {
+  margin-bottom: 10px;
+}
+.login div.email label, .login div.password label, .login div.name label {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+.login div.email input, .login div.password input, .login div.name input {
+  width: 100%;
+  font-size: 15px;
+  border: 2px grey dotted;
+  padding: 8px;
+  border-radius: 5px;
+}
+.login div.email input:focus, .login div.password input:focus, .login div.name input:focus {
+  border-color: rgb(86, 86, 255);
+  z-index: 1;
+}
+.login div.email input::-moz-placeholder, .login div.password input::-moz-placeholder, .login div.name input::-moz-placeholder {
+  color: transparent;
+}
+.login div.email input::placeholder, .login div.email input::-moz-placeholder, .login div.password input::placeholder, .login div.password input::-moz-placeholder, .login div.name input::placeholder, .login div.name input::-moz-placeholder {
+  color: transparent;
+}
+.login .registre-btn {
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: rgb(86, 86, 255);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.login .registre-btn a {
+  color: white !important;
+}
+.login .password,
+.login .facebook {
+  margin-bottom: 20px;
+}
+.login .google,
+.login .facebook {
+  margin-bottom: 10px;
+}
+.login .google button,
+.login .facebook button {
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+.login .google img,
+.login .facebook img {
+  width: 25px;
+  margin-right: 10px;
+}
+.login .google p,
+.login .facebook p {
+  font-size: 16px;
+}
+.login .user {
+  color: rgb(86, 86, 255);
+  font-weight: normal;
+}/*# sourceMappingURL=registre.css.map */

@@ -1,0 +1,99 @@
+// Import Helpers Classes
+@use "../../helpers/classes" as *;
+@use "../../helpers/global-roles" as *;
+@use "../../helpers/mixins" as *;
+@use "../../helpers/var" as *;
+
+
+.container {
+    background-color: rgb(86, 86, 255);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.login {
+    background-color: white;
+    padding: 20px;
+    width: 350px;
+    border-radius: 5px;
+  
+    .icon {
+      text-align: center;
+      font-size: 100px;
+      margin-bottom: 20px;
+    }
+  
+    div {
+      &.email,
+      &.password,
+      &.name {
+        margin-bottom: 10px;
+        label {
+          margin-bottom: 8px;
+          font-size: 16px;
+        }
+        input {
+            width: 100%;
+            font-size: 15px;
+            border: 2px grey dotted;
+            padding: 8px;
+            border-radius: 5px;
+    
+            &:focus {
+                border-color: rgb(86, 86, 255);
+                z-index: 1;
+            }
+            &::placeholder,
+            &::-moz-placeholder {
+                color: transparent;
+            }
+        }
+      }
+    }
+  
+    .registre-btn {
+      cursor: pointer;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: rgb(86, 86, 255);
+      border-radius: 5px;
+      margin-bottom: 10px;
+      a {
+        color: white !important;
+      }
+    }
+  
+    .password,
+    .facebook {
+        margin-bottom: 20px;
+    }
+  
+    .google,
+    .facebook {
+        margin-bottom: 10px;
+        button {
+            border-radius: 5px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+        }
+        img {
+            width: 25px;
+            margin-right: 10px;
+        }  
+        p {
+            font-size: 16px;
+        }
+    }
+    .user {
+      color: rgb(86, 86, 255);
+      font-weight: normal;
+    }
+  }
+  

@@ -1,4 +1,5 @@
 // Start helpers Classes
+@use "../helpers/var" as *;
 
 .hidden {
     display: none;
@@ -6,8 +7,13 @@
 .block {
     display: block;
 }
+.danger {
+    border-color: $danger !important;
+}
+.success {
+    border-color: $success !important;
 
-
+}
 
 
 

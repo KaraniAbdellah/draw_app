@@ -1,1 +1,23 @@
 // start mixins
+
+@mixin flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flex_between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin flex_around {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+

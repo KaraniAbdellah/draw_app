@@ -11,7 +11,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <!-- Styling File -->
-    <link rel="stylesheet" href="../sass/layout/login/main.css">
+    <link rel="stylesheet" href="../sass/layout/login/registre.css">
     <!-- Tab Image -->
     <link rel="icon" href="../../imgs/user.png" type="image/png">
       
@@ -22,23 +22,35 @@
         <div class="login">
             <div class="icon">🐵</div>
             <div class="name">
-                <label for="name">You name</label>
-                <input id="name" placeholder="John" type="text" class="name">
+                <label for="name">Your name</label>
+                <input id="name" placeholder="John" type="text" class="user_name">
             </div>
             <div class="email">
                 <label for="email">Email</label>
-                <input id="email" placeholder="exemple@gmail.com" type="text" class="email">
+                <input id="email" placeholder="exemple@gmail.com" type="text" class="user_email">
             </div>
             <div class="password">
                 <label for="password">Password</label>
-                <input id="password" type="password" placeholder="*******" type="text" class="password">
+                <input id="password" type="password" placeholder="*******" type="text" class="user_password">
             </div>
-            <button class="btn">Register</button>
-            <a  href="login.html" class="user">Already have an account</a>
+            <div class="google">
+                <button class="btn-google">
+                    <img src="../../imgs/google.png" alt="">
+                    <p>Sign up with Google</p>
+                </button>
+            </div>
+            <div class="facebook">
+                <button class="btn-facebook">
+                    <img src="../../imgs/facebook.png" alt="">
+                    <p>Sign up with Facebook</p>
+                </button>
+            </div>
+            <button class="registre-btn"><a href="../../index.html">Register</a></button>
+            <a  href="login.html" class="user">Already have an account?</a>
         </div>
     </div>
 
-    <!-- <script src="../"></script> -->
+    <script src="../login/registre.js"></script>
 
 </body>
 </html>

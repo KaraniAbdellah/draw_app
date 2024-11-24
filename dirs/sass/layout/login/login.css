@@ -1,3 +1,19 @@
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.danger {
+  border-color: #FF3B30 !important;
+}
+
+.success {
+  border-color: #28A745 !important;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -15,11 +31,13 @@ a {
 
 a, label {
   display: block;
+  cursor: pointer;
 }
 
 button {
   border: 0;
   outline: 0;
+  cursor: pointer;
 }
 
 ul {
@@ -29,14 +47,6 @@ ul {
 input:focus {
   border: 0;
   outline: 0;
-}
-
-.hidden {
-  display: none;
-}
-
-.block {
-  display: block;
 }
 
 .container {
@@ -59,31 +69,31 @@ input:focus {
   font-size: 100px;
   margin-bottom: 20px;
 }
-.login .email, .login .password, .login .name {
-  width: 100%;
+.login div.email, .login div.password, .login div.name {
   margin-bottom: 10px;
 }
-.login .email label, .login .password label, .login .name label {
+.login div.email label, .login div.password label, .login div.name label {
   margin-bottom: 8px;
   font-size: 16px;
 }
-.login .email input, .login .password input, .login .name input {
+.login div.email input, .login div.password input, .login div.name input {
+  width: 100%;
   font-size: 15px;
   border: 2px grey dotted;
   padding: 8px;
   border-radius: 5px;
 }
-.login .email input:focus, .login .password input:focus, .login .name input:focus {
+.login div.email input:focus, .login div.password input:focus, .login div.name input:focus {
   border-color: rgb(86, 86, 255);
   z-index: 1;
 }
-.login .email input:focus::-moz-placeholder, .login .password input:focus::-moz-placeholder, .login .name input:focus::-moz-placeholder {
+.login div.email input::-moz-placeholder, .login div.password input::-moz-placeholder, .login div.name input::-moz-placeholder {
   color: transparent;
 }
-.login .email input:focus::placeholder, .login .password input:focus::placeholder, .login .name input:focus::placeholder {
+.login div.email input::placeholder, .login div.email input::-moz-placeholder, .login div.password input::placeholder, .login div.password input::-moz-placeholder, .login div.name input::placeholder, .login div.name input::-moz-placeholder {
   color: transparent;
 }
-.login .btn {
+.login .login-btn {
   cursor: pointer;
   width: 100%;
   padding: 10px;
@@ -92,8 +102,4 @@ input:focus {
   color: white;
   border-radius: 5px;
   margin-bottom: 10px;
-}
-.login .user {
-  color: rgb(86, 86, 255);
-  font-weight: normal;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=login.css.map */
