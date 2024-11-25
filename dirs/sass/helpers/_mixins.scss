@@ -20,4 +20,48 @@
     align-items: center;
 }
 
+@mixin commmun_style {
+    background-color: white;
+    padding: 20px;
+    width: 350px;
+    border-radius: 5px;
+  
+    .icon-monekey {
+      text-align: center;
+      font-size: 100px;
+      margin-bottom: 20px;
+    }
+  
+    div {
+      &.email,
+      &.password,
+      &.name {
+        margin-bottom: 10px;
+        label {
+          margin-bottom: 8px;
+          font-size: 16px;
+        }
+        input {
+            width: 100%;
+            font-size: 15px;
+            border: 2px grey dotted;
+            padding: 8px;
+            border-radius: 5px;
+    
+            &:focus {
+                border-color: rgb(86, 86, 255);
+                z-index: 1;
+            }
+            &::placeholder,
+            &::-moz-placeholder {
+                color: transparent;
+            }
+        }
+      }
+    }
+    .hint_account {
+        color: rgb(86, 86, 255);
+        font-weight: normal;
+    }
+}
 

@@ -64,7 +64,7 @@ input:focus {
   width: 350px;
   border-radius: 5px;
 }
-.login .icon {
+.login .icon-monekey {
   text-align: center;
   font-size: 100px;
   margin-bottom: 20px;
@@ -92,6 +92,10 @@ input:focus {
 }
 .login div.email input::placeholder, .login div.email input::-moz-placeholder, .login div.password input::placeholder, .login div.password input::-moz-placeholder, .login div.name input::placeholder, .login div.name input::-moz-placeholder {
   color: transparent;
+}
+.login .hint_account {
+  color: rgb(86, 86, 255);
+  font-weight: normal;
 }
 .login .login-btn {
   cursor: pointer;

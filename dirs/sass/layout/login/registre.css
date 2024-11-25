@@ -56,6 +56,7 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .login {
@@ -64,7 +65,7 @@ input:focus {
   width: 350px;
   border-radius: 5px;
 }
-.login .icon {
+.login .icon-monekey {
   text-align: center;
   font-size: 100px;
   margin-bottom: 20px;
@@ -93,6 +94,10 @@ input:focus {
 .login div.email input::placeholder, .login div.email input::-moz-placeholder, .login div.password input::placeholder, .login div.password input::-moz-placeholder, .login div.name input::placeholder, .login div.name input::-moz-placeholder {
   color: transparent;
 }
+.login .hint_account {
+  color: rgb(86, 86, 255);
+  font-weight: normal;
+}
 .login .registre-btn {
   cursor: pointer;
   width: 100%;
@@ -101,20 +106,12 @@ input:focus {
   background-color: rgb(86, 86, 255);
   border-radius: 5px;
   margin-bottom: 10px;
+  color: white;
 }
-.login .registre-btn a {
-  color: white !important;
+.login .google {
+  margin: 10px;
 }
-.login .password,
-.login .facebook {
-  margin-bottom: 20px;
-}
-.login .google,
-.login .facebook {
-  margin-bottom: 10px;
-}
-.login .google button,
-.login .facebook button {
+.login .google button, .login .facebook button {
   border-radius: 5px;
   width: 100%;
   display: flex;
@@ -122,16 +119,42 @@ input:focus {
   justify-content: center;
   padding: 8px;
 }
-.login .google img,
-.login .facebook img {
+.login .google img, .login .facebook img {
   width: 25px;
   margin-right: 10px;
 }
-.login .google p,
-.login .facebook p {
+.login .google p, .login .facebook p {
   font-size: 16px;
 }
-.login .user {
-  color: rgb(86, 86, 255);
-  font-weight: normal;
+.login .password, .login .facebook {
+  margin-bottom: 20px !important;
+}
+
+.message {
+  background-color: white;
+  color: black;
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  padding: 10px 20px;
+}
+.message::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #FF3B30;
+  width: 100%;
+  height: 5px;
+  animation: toLeft;
+  animation-duration: 2s;
+}
+
+@keyframes toLeft {
+  0% {
+    width: 10px;
+  }
+  100% {
+    width: 100%;
+  }
 }/*# sourceMappingURL=registre.css.map */

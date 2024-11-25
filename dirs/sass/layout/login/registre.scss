@@ -12,47 +12,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
   
 .login {
-    background-color: white;
-    padding: 20px;
-    width: 350px;
-    border-radius: 5px;
-  
-    .icon {
-      text-align: center;
-      font-size: 100px;
-      margin-bottom: 20px;
-    }
-  
-    div {
-      &.email,
-      &.password,
-      &.name {
-        margin-bottom: 10px;
-        label {
-          margin-bottom: 8px;
-          font-size: 16px;
-        }
-        input {
-            width: 100%;
-            font-size: 15px;
-            border: 2px grey dotted;
-            padding: 8px;
-            border-radius: 5px;
-    
-            &:focus {
-                border-color: rgb(86, 86, 255);
-                z-index: 1;
-            }
-            &::placeholder,
-            &::-moz-placeholder {
-                color: transparent;
-            }
-        }
-      }
-    }
+    @include commmun_style;
   
     .registre-btn {
       cursor: pointer;
@@ -62,19 +26,13 @@
       background-color: rgb(86, 86, 255);
       border-radius: 5px;
       margin-bottom: 10px;
-      a {
-        color: white !important;
-      }
+      color: white;
     }
-  
-    .password,
-    .facebook {
-        margin-bottom: 20px;
+
+    .google {
+      margin: 10px;
     }
-  
-    .google,
-    .facebook {
-        margin-bottom: 10px;
+    .google, .facebook {
         button {
             border-radius: 5px;
             width: 100%;
@@ -91,9 +49,38 @@
             font-size: 16px;
         }
     }
-    .user {
-      color: rgb(86, 86, 255);
-      font-weight: normal;
+
+    .password, .facebook {
+      margin-bottom: 20px !important;
     }
+}
+
+.message {
+  background-color: white;
+  color: black;
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  padding: 10px 20px;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $danger;
+    width: 100%;
+    height: 5px;
+    animation: toLeft;
+    animation-duration: 2s;
   }
+}
+@keyframes toLeft {
+  0% {
+    width: 10px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
   
