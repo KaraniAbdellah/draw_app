@@ -14,69 +14,52 @@
     display: flex;
     justify-content: space-between;
     height: calc(100vh - 20px);
-    /* set global roles for page_content */
-    .title {
-        color: $main_color;
-        margin-bottom: 15px;
-        font-size: 18px;
-    }
-    .shapes > div > span {
-        width: 20px;
-        background-color: black;
-        height: 20px;
-        position: absolute;
-        top: 0;
-        left: 20px;
-        border: 2px solid black;
-        background-color: transparent;
-    }
 }
 
 .operations {
     width: 20%;
-    background-color: white;
-    box-shadow: $box_shadow;
-    padding: 10px;
     .shapes {
+        background-color: red;
         div {
-            padding-left: 50px;
-            margin-bottom: 10px;
-        }
-        .rectangle {
-            position: relative;
-            span {
-                border-radius: $border_radius - 2px;
-            }
-        }
-        .circle {
-            position: relative;
-            span {
-                border-radius: $border_radius + 10px;
-            }
-        }
-        .triangle {
-            position: relative;
-            span {
-                width: 20px;
-                background-color: black;
-                height: 20px;
-                position: absolute;
-                top: 0;
-                left: 20px;
-                border: 2px solid black;
-                background-color: transparent;
-                border-radius: $border_radius;
+            @include flex_center;
+            padding: 10px;
+            cursor: pointer;
+            img {
+                width: 30px;
             }
         }
     }
     .options {
-        div {
-            padding-left: 10px;
+        background-color: blue;
+        > div {
+            @include flex_center;
+            padding: 10px;
+            cursor: pointer;
+            i {font-size: 20px;}
         }
     }
     .colors {
-        div {
-            padding-left: 10px;
+        margin-bottom: 20px;
+        background-color: yellow;
+        position: relative;
+        div.color {
+            position: absolute;
+            @include flex_center;
+            span {
+                position: absolute;
+                width: 20px; height: 20px; border-radius: 50%;
+            }
+        }
+        .black {
+            background-color: red;
+            width: 25px; height: 25px; border-radius: 50%;
+            cursor: pointer;
+            span {
+                background-color: red;
+            }
+            &:hover span {
+                border: 3px solid white;
+            }
         }
     }
     .clear_canvas {

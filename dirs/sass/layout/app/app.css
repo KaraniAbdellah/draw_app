@@ -57,65 +57,66 @@ input:focus {
   display: flex;
   justify-content: space-between;
   height: calc(100vh - 20px);
-  /* set global roles for page_content */
-}
-.page_content .title {
-  color: rgb(86, 86, 255);
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-.page_content .shapes > div > span {
-  width: 20px;
-  background-color: black;
-  height: 20px;
-  position: absolute;
-  top: 0;
-  left: 20px;
-  border: 2px solid black;
-  background-color: transparent;
 }
 
 .operations {
   width: 20%;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  padding: 10px;
+}
+.operations .shapes {
+  background-color: red;
 }
 .operations .shapes div {
-  padding-left: 50px;
-  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
 }
-.operations .shapes .rectangle {
+.operations .shapes div img {
+  width: 30px;
+}
+.operations .options {
+  background-color: blue;
+}
+.operations .options > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+}
+.operations .options > div i {
+  font-size: 20px;
+}
+.operations .colors {
+  margin-bottom: 20px;
+  background-color: yellow;
   position: relative;
 }
-.operations .shapes .rectangle span {
-  border-radius: 3px;
-}
-.operations .shapes .circle {
-  position: relative;
-}
-.operations .shapes .circle span {
-  border-radius: 15px;
-}
-.operations .shapes .triangle {
-  position: relative;
-}
-.operations .shapes .triangle span {
-  width: 20px;
-  background-color: black;
-  height: 20px;
+.operations .colors div.color {
   position: absolute;
-  top: 0;
-  left: 20px;
-  border: 2px solid black;
-  background-color: transparent;
-  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.operations .options div {
-  padding-left: 10px;
+.operations .colors div.color span {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 }
-.operations .colors div {
-  padding-left: 10px;
+.operations .colors .black {
+  background-color: red;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.operations .colors .black span {
+  background-color: red;
+}
+.operations .colors .black:hover span {
+  border: 3px solid white;
 }
 .content_draw {
   background-color: #ffffff;
