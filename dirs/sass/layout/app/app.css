@@ -57,11 +57,22 @@ input:focus {
   display: flex;
   justify-content: space-between;
   height: calc(100vh - 20px);
+  /* set global roles for page_content */
 }
 .page_content .title {
   color: rgb(86, 86, 255);
   margin-bottom: 15px;
   font-size: 18px;
+}
+.page_content .shapes > div > span {
+  width: 20px;
+  background-color: black;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  border: 2px solid black;
+  background-color: transparent;
 }
 
 .operations {
@@ -78,28 +89,12 @@ input:focus {
   position: relative;
 }
 .operations .shapes .rectangle span {
-  width: 20px;
-  background-color: black;
-  height: 20px;
-  position: absolute;
-  top: 0;
-  left: 20px;
-  border: 2px solid black;
-  background-color: transparent;
   border-radius: 3px;
 }
 .operations .shapes .circle {
   position: relative;
 }
 .operations .shapes .circle span {
-  width: 20px;
-  background-color: black;
-  height: 20px;
-  position: absolute;
-  top: 0;
-  left: 20px;
-  border: 2px solid black;
-  background-color: transparent;
   border-radius: 15px;
 }
 .operations .shapes .triangle {
