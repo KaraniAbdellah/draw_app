@@ -1,11 +1,102 @@
 // Import Helpers Class
-@use "../helpers/global-roles" as *;
-@use "../helpers/mixins" as *;
-@use "../helpers/var" as *;
+@use "../../helpers/classes" as *;
+@use "../../helpers/mixins" as *;
+@use "../../helpers/var" as *;
+@use "../../helpers/global-roles" as *;
 
 
 // Start With App
 
+.page_content {
+    margin: 10px;
+    padding: 10px;
+    border-radius: $border_radius;
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 20px);
+    .title {
+        color: $main_color;
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+}
+
+.operations {
+    width: 20%;
+    background-color: white;
+    box-shadow: $box_shadow;
+    padding: 10px;
+    .shapes {
+        div {
+            padding-left: 50px;
+            margin-bottom: 10px;
+        }
+        .rectangle {
+            position: relative;
+            span {
+                width: 20px;
+                background-color: black;
+                height: 20px;
+                position: absolute;
+                top: 0;
+                left: 20px;
+                border: 2px solid black;
+                background-color: transparent;
+                border-radius: $border_radius - 2px;
+            }
+        }
+        .circle {
+            position: relative;
+            span {
+                width: 20px;
+                background-color: black;
+                height: 20px;
+                position: absolute;
+                top: 0;
+                left: 20px;
+                border: 2px solid black;
+                background-color: transparent;
+                border-radius: $border_radius + 10px;
+            }
+        }
+        .triangle {
+            position: relative;
+            span {
+                width: 20px;
+                background-color: black;
+                height: 20px;
+                position: absolute;
+                top: 0;
+                left: 20px;
+                border: 2px solid black;
+                background-color: transparent;
+                border-radius: $border_radius;
+            }
+        }
+    }
+    .options {
+        div {
+            padding-left: 10px;
+        }
+    }
+    .colors {
+        div {
+            padding-left: 10px;
+        }
+    }
+    .clear_canvas {
+
+    }
+    .save_as_img {
+
+    }
+}
+
+.content_draw {
+    background-color: #ffffff;
+    width: 75%;
+    box-shadow: $box_shadow;
+}
 
 
 
