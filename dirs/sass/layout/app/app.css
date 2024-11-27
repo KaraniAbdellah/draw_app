@@ -60,66 +60,102 @@ input:focus {
 }
 
 .operations {
-  width: 20%;
+  width: 10%;
 }
 .operations .shapes {
   background-color: red;
-}
-.operations .shapes div {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+.operations .shapes button {
   padding: 10px;
   cursor: pointer;
 }
-.operations .shapes div img {
+.operations .shapes button img {
   width: 30px;
 }
 .operations .options {
   background-color: blue;
-}
-.operations .options > div {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+.operations .options > button {
   padding: 10px;
   cursor: pointer;
 }
-.operations .options > div i {
+.operations .options > button i {
   font-size: 20px;
 }
 .operations .colors {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
   margin-bottom: 20px;
   background-color: yellow;
-  position: relative;
 }
-.operations .colors div.color {
-  position: absolute;
+.operations .colors button.color {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
 }
-.operations .colors div.color span {
+.operations .colors button.color span {
   position: absolute;
   width: 20px;
   height: 20px;
   border-radius: 50%;
 }
+.operations .colors button.color:hover span {
+  border: 2px solid white;
+}
+.operations .colors button.color:not(:last-child) {
+  margin-bottom: 10px;
+}
 .operations .colors .black {
-  background-color: red;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  cursor: pointer;
+  background-color: rgb(0, 0, 0);
 }
 .operations .colors .black span {
+  background-color: black;
+}
+.operations .colors .red {
   background-color: red;
 }
-.operations .colors .black:hover span {
-  border: 3px solid white;
+.operations .colors .red span {
+  background-color: red;
 }
+.operations .colors .green {
+  background-color: green;
+}
+.operations .colors .green span {
+  background-color: green;
+}
+.operations .colors .blue {
+  background-color: blue;
+}
+.operations .colors .blue span {
+  background-color: blue;
+}
+.operations .clear_canvas {
+  font-size: 16px;
+  padding: 10px;
+}
+.operations .save_as_img {
+  font-size: 16px;
+  padding: 10px;
+}
+
 .content_draw {
   background-color: #ffffff;
-  width: 75%;
+  width: 85%;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }/*# sourceMappingURL=app.css.map */
