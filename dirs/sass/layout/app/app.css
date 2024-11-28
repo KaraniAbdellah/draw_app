@@ -55,108 +55,84 @@ input:focus {
   padding: 10px;
   border-radius: 5px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   height: calc(100vh - 20px);
 }
 
 .operations {
-  width: 10%;
-}
-.operations .shapes {
-  background-color: red;
+  height: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  background-color: grey;
 }
-.operations .shapes button {
-  padding: 10px;
-  cursor: pointer;
+.operations > div button {
   width: 50px;
+  height: 50px;
+}
+.operations > div:not(:last-child) {
+  margin-right: 20px;
+}
+.operations .shapes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .operations .shapes button img {
   width: 30px;
 }
 .operations .options {
-  background-color: blue;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-}
-.operations .options > button {
-  padding: 10px;
-  cursor: pointer;
-  width: 50px;
 }
 .operations .options > button i {
   font-size: 20px;
 }
 .operations .colors {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  padding: 10px;
-  margin-bottom: 20px;
-  background-color: yellow;
-}
-.operations .colors button p.color {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 25px;
-  height: 25px;
+}
+.operations .colors button.color {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
+  transition: 0.3s;
 }
-.operations .colors button p.color span {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+.operations .colors button.color:not(:last-child) {
+  margin-right: 10px;
 }
-.operations .colors button p.color:hover span {
-  border: 2px solid white;
-}
-.operations .colors button p.color:not(:last-child) {
-  margin-bottom: 10px;
+.operations .colors button.color:hover {
+  transform: scale(1.2);
 }
 .operations .colors .black {
-  background-color: rgb(0, 0, 0);
-}
-.operations .colors .black span {
   background-color: black;
 }
 .operations .colors .red {
   background-color: red;
 }
-.operations .colors .red span {
-  background-color: red;
-}
 .operations .colors .green {
-  background-color: green;
-}
-.operations .colors .green span {
   background-color: green;
 }
 .operations .colors .blue {
   background-color: blue;
 }
-.operations .colors .blue span {
-  background-color: blue;
+.operations .btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.operations .clear_canvas {
-  font-size: 16px;
-  padding: 10px;
-}
-.operations .save_as_img {
+.operations .btns .clear_canvas, .operations .btns .save_as_img {
   font-size: 16px;
   padding: 10px;
 }
 
 .content_draw {
   background-color: #ffffff;
-  width: 85%;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  height: 90%;
 }/*# sourceMappingURL=app.css.map */
