@@ -7,7 +7,7 @@
 }
 
 .danger {
-  border-color: #FF3B30 !important;
+  border-color: #ff6058 !important;
 }
 
 .success {
@@ -51,24 +51,35 @@ input:focus {
 }
 
 .page_content {
-  margin: 10px;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 10px 0 0 0;
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  height: calc(100vh - 20px);
+  height: 100vh;
 }
 
 .operations {
+  background: linear-gradient(to right, #A1C4FD, #C2E9FB);
   height: 10%;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: grey;
+}
+.operations > div {
+  border: 2px solid #e6e6e6;
 }
 .operations > div button {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s;
+  background-color: #f3f3f3;
+}
+.operations > div button:hover {
+  transform: scale(1.1);
 }
 .operations > div:not(:last-child) {
   margin-right: 20px;
@@ -93,6 +104,7 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
 }
 .operations .colors button.color {
   display: flex;
@@ -101,13 +113,9 @@ input:focus {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  transition: 0.3s;
 }
 .operations .colors button.color:not(:last-child) {
   margin-right: 10px;
-}
-.operations .colors button.color:hover {
-  transform: scale(1.2);
 }
 .operations .colors .black {
   background-color: black;
@@ -130,9 +138,14 @@ input:focus {
   font-size: 16px;
   padding: 10px;
 }
+.operations .btns .clear_canvas i {
+  color: #ff6058;
+}
+.operations .btns .save_as_img i {
+  color: #5cabff;
+}
 
 .content_draw {
-  background-color: #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   height: 90%;
+  background-color: rgba(238, 238, 238, 0.9333333333);
 }/*# sourceMappingURL=app.css.map */

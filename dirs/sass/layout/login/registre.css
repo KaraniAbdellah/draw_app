@@ -7,7 +7,7 @@
 }
 
 .danger {
-  border-color: #FF3B30 !important;
+  border-color: #ff6058 !important;
 }
 
 .success {
@@ -144,7 +144,7 @@ input:focus {
   position: absolute;
   bottom: 0;
   right: 0;
-  background-color: #FF3B30;
+  background-color: #ff6058;
   width: 100%;
   height: 5px;
   animation: toLeft;

@@ -8,28 +8,37 @@
 // Start With App
 
 .page_content {
-    margin: 10px;
-    padding: 10px;
-    border-radius: $border_radius;
-    display: flex;
+    padding: 10px 0 0 0;
+    display: flex; justify-content: center;
     flex-direction: column;
-    height: calc(100vh - 20px);
+    height: 100vh;
 }
 
 .operations {
+    background: linear-gradient(to right, #A1C4FD, #C2E9FB);
     height: 10%;
-    @include flex_center;
-    background-color: grey;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: $border_radius;
+    margin-bottom: 10px;
+    @include flex_center; 
     > div {
-        button { width: 50px; height: 50px;}
-        &:not(:last-child) {margin-right: 20px;}
+        border: 2px solid #e6e6e6;
+        button { 
+            width: 40px;
+            height: 40px;
+            transition: $transition;
+            background-color: #f3f3f3;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        &:not(:last-child) {margin-right: 20px;} 
     }
     .shapes {
         @include flex_center;
         button {
-            img {
-                width: 30px;
-            }
+            img {width: 30px;}
         }
     }
     .options {
@@ -40,14 +49,11 @@
     }
     .colors {
         @include flex_center;
+        border: none;
         button.color {
             @include flex_center;
             width: 35px; height: 35px; border-radius: 50%;
             &:not(:last-child) {margin-right: 10px;}
-            transition: $transition;
-            &:hover {
-                transform: scale(1.2);
-            }
         }
         .black { background-color: black;}
         .red { background-color: red;}
@@ -60,13 +66,14 @@
             font-size: 16px;
             padding: 10px;
         }
+        .clear_canvas i {color: $danger;}
+        .save_as_img i {color: $save;}
     }
 }
 
 .content_draw {
-    background-color: #ffffff;
-    box-shadow: $box_shadow;
     height: 90%;
+    background-color: #eeee;
 }
 
 
