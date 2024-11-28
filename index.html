@@ -19,25 +19,26 @@
     
     <div class="page_content">
         <aside class="operations">
-            
             <div class="options">
-                <button class="pen">
+                <button class="pen clicked">
                     <i class="fa-solid fa-pen"></i>
                 </button>
                 <button class="eraser">
                     <i class="fa-solid fa-eraser"></i>
                 </button>
-                <button class="color">
+                <button class="color_size">
+                    <div class="size hidden">
+                        <input type="range" value="10">
+                    </div>
                     <i class="fa-solid fa-droplet"></i>
-                    <input class="hidden" type="range">
                 </button>
             </div>
             <div class="colors">
-                <button class="black color"></button>
-                <button class="red color"></button>
-                <button class="green color"></button>
-                <button class="blue color"></button>
-                <input type="color" value="#ff89f8" name="" id="">
+                <button id="color" class="black"></button>
+                <button id="color" class="red"></button>
+                <button id="color" class="green"></button>
+                <button id="color" class="blue"></button>
+                <input id="color" class="choice-color" type="color" value="#ff89f8" name="" id="">
             </div>
             <div class="btns">
                 <button class="clear_canvas">
@@ -49,7 +50,7 @@
             </div>
         </aside>
         <div class="content_draw">
-            <!-- Not Implemented -->
+            <canvas id="myCanvas"></canvas>
         </div>
     </div>
 

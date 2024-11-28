@@ -21,6 +21,7 @@
     margin: 0 auto;
     border-radius: $border_radius;
     margin-bottom: 10px;
+    height: 60px;
     @include flex_center; 
     > div {
         border: 2px solid #fff5f5;
@@ -40,13 +41,28 @@
     .options {
         @include flex_center;
         > button {
+            &.clicked {
+                background-color: $main_color; border-radius: 4px;
+                i { color: white; }
+            }
             i {font-size: 20px;}
+            &.color_size {
+                position: relative;
+                div.size {
+                    position: absolute;
+                    background: white;
+                    top: 0;
+                    left: 0;
+                    padding: 10px;
+                    border-radius: 20px;
+                }
+            }
         }
     }
     .colors {
         @include flex_center;
         border: none;
-        button.color {
+        button#color {
             @include flex_center;
             width: 35px;
             height: 35px;
@@ -73,7 +89,9 @@
 }
 
 .content_draw {
-    height: 90%;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+    box-shadow: $box_shadow;
 }
 
 

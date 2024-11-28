@@ -65,6 +65,7 @@ input:focus {
   margin: 0 auto;
   border-radius: 5px;
   margin-bottom: 10px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,8 +95,26 @@ input:focus {
   align-items: center;
   justify-content: center;
 }
+.operations .options > button.clicked {
+  background-color: #5e5eff;
+  border-radius: 4px;
+}
+.operations .options > button.clicked i {
+  color: white;
+}
 .operations .options > button i {
   font-size: 20px;
+}
+.operations .options > button.color_size {
+  position: relative;
+}
+.operations .options > button.color_size div.size {
+  position: absolute;
+  background: white;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  border-radius: 20px;
 }
 .operations .colors {
   display: flex;
@@ -103,7 +122,7 @@ input:focus {
   justify-content: center;
   border: none;
 }
-.operations .colors button.color {
+.operations .colors button#color {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,10 +130,10 @@ input:focus {
   height: 35px;
   border-radius: 50%;
 }
-.operations .colors button.color:not(:last-child) {
+.operations .colors button#color:not(:last-child) {
   margin-right: 10px;
 }
-.operations .colors button.color.clicked {
+.operations .colors button#color.clicked {
   border: 2px solid white;
 }
 .operations .colors .black {
@@ -149,5 +168,7 @@ input:focus {
 }
 
 .content_draw {
-  height: 90%;
+  height: calc(100vh - 80px);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.0196078431) 0px 1px 3px 0px, rgba(27, 31, 35, 0.1490196078) 0px 0px 0px 1px;
 }/*# sourceMappingURL=app.css.map */
