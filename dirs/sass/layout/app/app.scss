@@ -23,7 +23,8 @@
     margin-bottom: 10px;
     @include flex_center; 
     > div {
-        border: 2px solid #fff5f5; border-radius: $border_radius;
+        border: 2px solid #fff5f5;
+        border-radius: $border_radius;
         button { 
             width: 40px;
             height: 40px;
@@ -32,15 +33,9 @@
             &:hover {
                 transform: scale(1.1);
             }
-            i {font-size: 18px !important;}
+            i {font-size: 18px !important; color: #444;}
         }
         &:not(:last-child) {margin-right: 20px;} 
-    }
-    .shapes {
-        @include flex_center;
-        button {
-            img {width: 30px;}
-        }
     }
     .options {
         @include flex_center;
@@ -53,13 +48,19 @@
         border: none;
         button.color {
             @include flex_center;
-            width: 35px; height: 35px; border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
             &:not(:last-child) {margin-right: 10px;}
+            &.clicked {
+                border: 2px solid white;
+            }
         }
-        .black { background-color: black;}
-        .red { background-color: red;}
-        .green { background-color: green;}
-        .blue { background-color: blue;}
+        .black { background-color: #444; }
+        .red { background-color: $danger;}
+        .green { background-color: $success;}
+        .blue { background-color: $save;}
+        input { height: 30px; cursor: pointer; }
     }
     .btns {
         @include flex_center;

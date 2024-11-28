@@ -84,17 +84,10 @@ input:focus {
 }
 .operations > div button i {
   font-size: 18px !important;
+  color: #444;
 }
 .operations > div:not(:last-child) {
   margin-right: 20px;
-}
-.operations .shapes {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.operations .shapes button img {
-  width: 30px;
 }
 .operations .options {
   display: flex;
@@ -121,17 +114,24 @@ input:focus {
 .operations .colors button.color:not(:last-child) {
   margin-right: 10px;
 }
+.operations .colors button.color.clicked {
+  border: 2px solid white;
+}
 .operations .colors .black {
-  background-color: black;
+  background-color: #444;
 }
 .operations .colors .red {
-  background-color: red;
+  background-color: #ff6058;
 }
 .operations .colors .green {
-  background-color: green;
+  background-color: #28A745;
 }
 .operations .colors .blue {
-  background-color: blue;
+  background-color: #5cabff;
+}
+.operations .colors input {
+  height: 30px;
+  cursor: pointer;
 }
 .operations .btns {
   display: flex;
