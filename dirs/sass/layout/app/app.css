@@ -72,6 +72,7 @@ input:focus {
 .operations .shapes button {
   padding: 10px;
   cursor: pointer;
+  width: 50px;
 }
 .operations .shapes button img {
   width: 30px;
@@ -86,6 +87,7 @@ input:focus {
 .operations .options > button {
   padding: 10px;
   cursor: pointer;
+  width: 50px;
 }
 .operations .options > button i {
   font-size: 20px;
@@ -100,25 +102,24 @@ input:focus {
   margin-bottom: 20px;
   background-color: yellow;
 }
-.operations .colors button.color {
+.operations .colors button p.color {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   width: 25px;
   height: 25px;
   border-radius: 50%;
 }
-.operations .colors button.color span {
+.operations .colors button p.color span {
   position: absolute;
   width: 20px;
   height: 20px;
   border-radius: 50%;
 }
-.operations .colors button.color:hover span {
+.operations .colors button p.color:hover span {
   border: 2px solid white;
 }
-.operations .colors button.color:not(:last-child) {
+.operations .colors button p.color:not(:last-child) {
   margin-bottom: 10px;
 }
 .operations .colors .black {

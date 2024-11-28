@@ -25,6 +25,7 @@
         button {
             padding: 10px;
             cursor: pointer;
+            width: 50px;
             img {
                 width: 30px;
             }
@@ -37,6 +38,7 @@
         > button {
             padding: 10px;
             cursor: pointer;
+            width: 50px;
             i {font-size: 20px;}
         }
     }
@@ -47,18 +49,22 @@
         padding: 10px;
         margin-bottom: 20px;
         background-color: yellow;
-        button.color {
-            @include flex_center;cursor: pointer;
-            width: 25px; height: 25px; border-radius: 50%;
-            span {
-                position: absolute;
-                width: 20px; height: 20px; border-radius: 50%;
-            }
-            &:hover span {
-                border: 2px solid white;
-            }
-            &:not(:last-child) {
-               margin-bottom: 10px;    
+        button {
+            p.color {
+                @include flex_center;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                span {
+                    position: absolute;
+                    width: 20px; height: 20px; border-radius: 50%;
+                }
+                &:hover span {
+                    border: 2px solid white;
+                }
+                &:not(:last-child) {
+                   margin-bottom: 10px;    
+                }
             }
         }
         .black {
