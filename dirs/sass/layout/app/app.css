@@ -70,7 +70,8 @@ input:focus {
   justify-content: center;
 }
 .operations > div {
-  border: 2px solid #e6e6e6;
+  border: 2px solid #fff5f5;
+  border-radius: 5px;
 }
 .operations > div button {
   width: 40px;
@@ -80,6 +81,9 @@ input:focus {
 }
 .operations > div button:hover {
   transform: scale(1.1);
+}
+.operations > div button i {
+  font-size: 18px !important;
 }
 .operations > div:not(:last-child) {
   margin-right: 20px;
@@ -135,7 +139,6 @@ input:focus {
   justify-content: center;
 }
 .operations .btns .clear_canvas, .operations .btns .save_as_img {
-  font-size: 16px;
   padding: 10px;
 }
 .operations .btns .clear_canvas i {
@@ -147,5 +150,4 @@ input:focus {
 
 .content_draw {
   height: 90%;
-  background-color: rgba(238, 238, 238, 0.9333333333);
 }/*# sourceMappingURL=app.css.map */

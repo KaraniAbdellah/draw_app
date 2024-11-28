@@ -23,7 +23,7 @@
     margin-bottom: 10px;
     @include flex_center; 
     > div {
-        border: 2px solid #e6e6e6;
+        border: 2px solid #fff5f5; border-radius: $border_radius;
         button { 
             width: 40px;
             height: 40px;
@@ -32,6 +32,7 @@
             &:hover {
                 transform: scale(1.1);
             }
+            i {font-size: 18px !important;}
         }
         &:not(:last-child) {margin-right: 20px;} 
     }
@@ -63,7 +64,6 @@
     .btns {
         @include flex_center;
         .clear_canvas, .save_as_img {
-            font-size: 16px;
             padding: 10px;
         }
         .clear_canvas i {color: $danger;}
@@ -73,7 +73,6 @@
 
 .content_draw {
     height: 90%;
-    background-color: #eeee;
 }
 
 
