@@ -18,43 +18,47 @@
 <body>
     
     <div class="page_content">
-        <div class="profile">
-            <p class="email"></p>
-            <div class="img-profile"></div>
-            <p class="msg">Hello <span class="msg-user"></span>!</p>
-            <button>Manage your account</button>
+        <div class="profile-icon"><span class="char_name">A</span></div>
+        <div class="profile ">
+            <p class="email">abdellahkarani@gmail.com</p>
+            <div class="img-profile">A</div>
+            <p class="msg">Hello <span class="msg-user">Abdellah</span>!</p>
+            <button class="manage">Manage your account</button>
+            <button class="log_out"><a href="dirs/login/login.html">Log Out</a><span></span></button>
         </div>
-        <aside class="operations">
-            <div class="options">
-                <button class="pen clicked">
-                    <i class="fa-solid fa-pen"></i>
-                </button>
-                <button class="eraser">
-                    <i class="fa-solid fa-eraser"></i>
-                </button>
-                <button class="color_size">
-                    <div class="size hidden">
-                        <input type="range" value="10">
-                    </div>
-                    <i class="fa-solid fa-droplet"></i>
-                </button>
-            </div>
-            <div class="colors">
-                <button id="color" class="black"></button>
-                <button id="color" class="red"></button>
-                <button id="color" class="green"></button>
-                <button id="color" class="blue"></button>
-                <input id="color" class="choice-color" type="color" value="#ff89f8" name="" id="">
-            </div>
-            <div class="btns">
-                <button class="clear_canvas">
-                    <i class="fa-solid fa-trash"></i>
-                </button>
-                <button class="save_as_img">
-                    <i class="fa-solid fa-floppy-disk"></i>
-                </button>
-            </div>
-        </aside>
+        <header>
+            <aside class="operations">
+                <div class="options">
+                    <button class="pen clicked">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button class="eraser">
+                        <i class="fa-solid fa-eraser"></i>
+                    </button>
+                    <button class="color_size">
+                        <div class="size hidden">
+                            <input type="range" value="10">
+                        </div>
+                        <i class="fa-solid fa-droplet"></i>
+                    </button>
+                </div>
+                <div class="colors">
+                    <button id="color" class="black"></button>
+                    <button id="color" class="red"></button>
+                    <button id="color" class="green"></button>
+                    <button id="color" class="blue"></button>
+                    <input id="color" class="choice-color" type="color" value="#ff89f8" name="" id="">
+                </div>
+                <div class="btns">
+                    <button class="clear_canvas">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                    <button class="save_as_img">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                    </button>
+                </div>
+            </aside>
+        </header>
         <div class="content_draw">
             <canvas id="myCanvas"></canvas>
         </div>

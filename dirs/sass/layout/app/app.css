@@ -56,9 +56,91 @@ input:focus {
   justify-content: center;
   flex-direction: column;
   height: 100vh;
+  position: relative;
 }
 
-.operations {
+.profile-icon {
+  position: absolute;
+  top: 20px;
+  right: 13px;
+  background-color: #5285cd;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.profile-icon:hover {
+  outline: 4px solid #eee;
+}
+
+.profile {
+  position: absolute;
+  top: 70px;
+  right: 30px;
+  text-align: center;
+  background-color: #f3f3f3;
+  padding: 20px;
+  border-radius: 9px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+.profile .email {
+  margin-bottom: 20px;
+}
+.profile .img-profile {
+  margin: 20px 0;
+  background-color: #5285cd;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50%;
+  margin: 5px auto;
+}
+.profile .msg {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.profile button {
+  border-radius: 20px;
+  border: 1px solid black;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+}
+.profile button.manage {
+  color: #5e5eff;
+}
+.profile button.manage:hover {
+  background-color: rgba(147, 147, 147, 0.1803921569);
+}
+.profile button.log_out {
+  margin-top: 10px;
+  border: 1px solid #ff453a;
+}
+.profile button.log_out a {
+  color: #ff453a;
+}
+.profile button.log_out:hover {
+  background-color: rgba(255, 69, 58, 0.2);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .operations {
   background: linear-gradient(to right, #A1C4FD, #C2E9FB);
   height: 10%;
   padding: 10px;
@@ -70,45 +152,45 @@ input:focus {
   align-items: center;
   justify-content: center;
 }
-.operations > div {
+header .operations > div {
   border: 2px solid #fff5f5;
   border-radius: 5px;
 }
-.operations > div button {
+header .operations > div button {
   width: 40px;
   height: 40px;
   transition: 0.3s;
   background-color: #f3f3f3;
 }
-.operations > div button:hover {
+header .operations > div button:hover {
   transform: scale(1.1);
 }
-.operations > div button i {
+header .operations > div button i {
   font-size: 18px !important;
   color: #444;
 }
-.operations > div:not(:last-child) {
+header .operations > div:not(:last-child) {
   margin-right: 20px;
 }
-.operations .options {
+header .operations .options {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.operations .options > button.clicked {
+header .operations .options > button.clicked {
   background-color: #5e5eff;
   border-radius: 4px;
 }
-.operations .options > button.clicked i {
+header .operations .options > button.clicked i {
   color: white;
 }
-.operations .options > button i {
+header .operations .options > button i {
   font-size: 20px;
 }
-.operations .options > button.color_size {
+header .operations .options > button.color_size {
   position: relative;
 }
-.operations .options > button.color_size div.size {
+header .operations .options > button.color_size div.size {
   position: absolute;
   background: white;
   top: 0;
@@ -116,13 +198,13 @@ input:focus {
   padding: 10px;
   border-radius: 20px;
 }
-.operations .colors {
+header .operations .colors {
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
 }
-.operations .colors button#color {
+header .operations .colors button#color {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,40 +212,40 @@ input:focus {
   height: 35px;
   border-radius: 50%;
 }
-.operations .colors button#color:not(:last-child) {
+header .operations .colors button#color:not(:last-child) {
   margin-right: 10px;
 }
-.operations .colors button#color.clicked {
+header .operations .colors button#color.clicked {
   border: 2px solid white;
 }
-.operations .colors .black {
+header .operations .colors .black {
   background-color: #444;
 }
-.operations .colors .red {
+header .operations .colors .red {
   background-color: #ff6058;
 }
-.operations .colors .green {
+header .operations .colors .green {
   background-color: #28A745;
 }
-.operations .colors .blue {
+header .operations .colors .blue {
   background-color: #5cabff;
 }
-.operations .colors input {
+header .operations .colors input {
   height: 30px;
   cursor: pointer;
 }
-.operations .btns {
+header .operations .btns {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.operations .btns .clear_canvas, .operations .btns .save_as_img {
+header .operations .btns .clear_canvas, header .operations .btns .save_as_img {
   padding: 10px;
 }
-.operations .btns .clear_canvas i {
+header .operations .btns .clear_canvas i {
   color: #ff6058;
 }
-.operations .btns .save_as_img i {
+header .operations .btns .save_as_img i {
   color: #5cabff;
 }
 

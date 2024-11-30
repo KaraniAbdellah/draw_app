@@ -12,100 +12,152 @@
     display: flex; justify-content: center;
     flex-direction: column;
     height: 100vh;
+    position: relative;
 }
-// <div class="profile">
-//             <p class="email"></p>
-//             <div class="img-profile"></div>
-//             <p class="msg">Hello <span class="msg-user"></span>!</p>
-//             <button>Manage your account</button>
-//         </div>
+
+.profile-icon {
+    position: absolute;
+    top: 20px;
+    right: 13px;
+    background-color: #5285cd;
+    width: 40px; height: 40px;
+    @include flex_center;
+    color: white;
+    font-size: 18px; font-weight: 600;
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover {
+        outline: 4px solid #eee;
+    }
+}
 
 .profile {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    text-align: center;
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: $border_radius + 4px;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
     .email {
-        
+        margin-bottom: 20px;
     }
     .img-profile {
-
+        margin: 20px 0;
+        background-color: #5285cd;
+        width: 50px; height: 50px;
+        @include flex_center;
+        color: white;
+        font-size: 18px; font-weight: 600;
+        border-radius: 50%;
+        margin: 5px auto;
     }
     .msg {
-
+        font-size: 18px; 
+        margin-bottom: 20px;
     }
     button {
-
+        border-radius: $border_radius + 15px;
+        border: 1px solid black;
+        font-weight: 600;
+        font-size: 15px;
+        padding: 10px;
+        width: 100%;
     }
+    button.manage {
+        color: $main_color;
+        &:hover {
+            background-color: #9393932e;
+        }
+    }
+    button.log_out {
+        margin-top: 10px;
+        border: 1px solid #ff453a;
+        a {
+            color: #ff453a;
+        }
+        &:hover {
+            background-color: rgba(255, 69, 58, 0.2);
+        }
+    }
+    
 }
 
-.operations {
-    background: linear-gradient(to right, #A1C4FD, #C2E9FB);
-    height: 10%;
-    padding: 10px;
-    margin: 0 auto;
-    border-radius: $border_radius;
-    margin-bottom: 10px;
-    height: 60px;
-    @include flex_center; 
-    > div {
-        border: 2px solid #fff5f5;
+header {
+    @include flex_center;
+    .operations {
+        background: linear-gradient(to right, #A1C4FD, #C2E9FB);
+        height: 10%;
+        padding: 10px;
+        margin: 0 auto;
         border-radius: $border_radius;
-        button { 
-            width: 40px;
-            height: 40px;
-            transition: $transition;
-            background-color: #f3f3f3;
-            &:hover {
-                transform: scale(1.1);
+        margin-bottom: 10px;
+        height: 60px;
+        @include flex_center; 
+        > div {
+            border: 2px solid #fff5f5;
+            border-radius: $border_radius;
+            button { 
+                width: 40px;
+                height: 40px;
+                transition: $transition;
+                background-color: #f3f3f3;
+                &:hover {
+                    transform: scale(1.1);
+                }
+                i {font-size: 18px !important; color: #444;}
             }
-            i {font-size: 18px !important; color: #444;}
+            &:not(:last-child) {margin-right: 20px;} 
         }
-        &:not(:last-child) {margin-right: 20px;} 
-    }
-    .options {
-        @include flex_center;
-        > button {
-            &.clicked {
-                background-color: $main_color; border-radius: 4px;
-                i { color: white; }
-            }
-            i {font-size: 20px;}
-            &.color_size {
-                position: relative;
-                div.size {
-                    position: absolute;
-                    background: white;
-                    top: 0;
-                    left: 0;
-                    padding: 10px;
-                    border-radius: 20px;
+        .options {
+            @include flex_center;
+            > button {
+                &.clicked {
+                    background-color: $main_color; border-radius: 4px;
+                    i { color: white; }
+                }
+                i {font-size: 20px;}
+                &.color_size {
+                    position: relative;
+                    div.size {
+                        position: absolute;
+                        background: white;
+                        top: 0;
+                        left: 0;
+                        padding: 10px;
+                        border-radius: 20px;
+                    }
                 }
             }
         }
-    }
-    .colors {
-        @include flex_center;
-        border: none;
-        button#color {
+        .colors {
             @include flex_center;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            &:not(:last-child) {margin-right: 10px;}
-            &.clicked {
-                border: 2px solid white;
+            border: none;
+            button#color {
+                @include flex_center;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                &:not(:last-child) {margin-right: 10px;}
+                &.clicked {
+                    border: 2px solid white;
+                }
             }
+            .black { background-color: #444; }
+            .red { background-color: $danger;}
+            .green { background-color: $success;}
+            .blue { background-color: $save;}
+            input { height: 30px; cursor: pointer; }
         }
-        .black { background-color: #444; }
-        .red { background-color: $danger;}
-        .green { background-color: $success;}
-        .blue { background-color: $save;}
-        input { height: 30px; cursor: pointer; }
-    }
-    .btns {
-        @include flex_center;
-        .clear_canvas, .save_as_img {
-            padding: 10px;
+        .btns {
+            @include flex_center;
+            .clear_canvas, .save_as_img {
+                padding: 10px;
+            }
+            .clear_canvas i {color: $danger;}
+            .save_as_img i {color: $save;}
         }
-        .clear_canvas i {color: $danger;}
-        .save_as_img i {color: $save;}
     }
 }
 
