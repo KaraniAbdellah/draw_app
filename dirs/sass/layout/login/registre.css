@@ -110,7 +110,7 @@ input:focus {
   color: white;
 }
 .login .google {
-  margin: 10px;
+  margin: 10px 0;
 }
 .login .google button, .login .facebook button {
   border-radius: 5px;
