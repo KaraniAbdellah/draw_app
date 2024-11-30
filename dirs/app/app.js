@@ -1,11 +1,10 @@
-
 // Start Options Part
 const options = document.querySelectorAll(".options button");
 const ele_size = document.querySelector("div.size");
 const contentDraw = document.querySelector(".content_draw");
 const color_size = document.querySelector(".color_size .size input");
 
-// start canvas variables
+// Start canvas variables
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 
@@ -13,7 +12,7 @@ let isDrawing = false;
 let currentTool = "pen";
 let color_name = "black";
 
-// Color varaible
+// Color variables
 const colors = document.querySelectorAll("#color");
 const colorInput = document.querySelector("input#color");
 
@@ -24,18 +23,18 @@ canvas.height = contentDraw.offsetHeight;
 // Track the tool selected
 options.forEach(element => {
     element.addEventListener("click", () => {
-        // Add "clicked" class to correspond ele
+        // Add "clicked" class to corresponding element
         options.forEach(el => el.classList.remove("clicked"));
         element.classList.add("clicked");
 
-        // show the size of pen
-         if (element.classList.contains("color_size")) {
-            let ChildEle =element.firstElementChild; 
+        // Show the size adjustment for pen
+        if (element.classList.contains("color_size")) {
+            let ChildEle = element.firstElementChild;
             ChildEle.classList.add("block");
             ChildEle.classList.remove("hidden");
         }
 
-        // start using canvas with "pen" & "eraser"
+        // Switch between "pen" and "eraser"
         if (element.classList.contains("pen")) {
             currentTool = "pen";
         } else if (element.classList.contains("eraser")) {
@@ -44,20 +43,23 @@ options.forEach(element => {
     });
 });
 
-// Track the color
+// Track the color changes
 colors.forEach(element => {
-    element.addEventListener("click", function() {
+    element.addEventListener("click", function () {
         color_name = element.className;
     });
 });
-colorInput.addEventListener("input", function() {
+
+colorInput.addEventListener("input", function () {
     color_name = colorInput.value;
 });
 
-
 // Mouse events for drawing/erasing
 canvas.addEventListener("mousedown", () => (isDrawing = true));
-canvas.addEventListener("mouseup", () => (isDrawing = false));
+canvas.addEventListener("mouseup", () => {
+    isDrawing = false;
+    ctx.beginPath(); // Reset path after drawing
+});
 canvas.addEventListener("mousemove", drawOrErase);
 
 // Function to draw or erase
@@ -77,21 +79,47 @@ function drawOrErase(event) {
         ctx.beginPath();
         ctx.moveTo(x, y);
     } else if (currentTool === "eraser") {
-        ctx.fillStyle = color_size.value;
         ctx.clearRect(x - 5, y - 5, color_size.value, color_size.value);
     }
 }
 
-
-ele_size.addEventListener("mouseout", function() {
+// Hide the size adjustment element on mouse out
+ele_size.addEventListener("mouseout", function () {
     ele_size.classList.add("hidden");
     ele_size.classList.remove("block");
-})
+});
 
 // Start Save & Delete Part
 let clear_canvas = document.querySelector(".clear_canvas");
 let save_as_img = document.querySelector(".save_as_img");
 
+// Clear the canvas
+clear_canvas.addEventListener("click", function () {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
+
+// Save the canvas as an image
+save_as_img.addEventListener("click", function () {
+    const imgData = canvas.toDataURL("image/png");
+    const link = document.createElement("a");
+    link.download = "drawing.png";
+    link.href = imgData;
+    link.click();
+});
+
+
+
+// Manage User Profile
+
+// <div class="profile">
+//             <p class="email"></p>
+//             <div class="img-profile"></div>
+//             <p class="msg">Hello <span class="msg-user"></span>!</p>
+//             <button>Manage your account</button>
+//         </div>
+
+let email = document.querySelector(".email");
+let img_profile = document.querySelector(".img-profile");
 
 
 

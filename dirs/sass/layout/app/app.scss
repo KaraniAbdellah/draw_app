@@ -13,6 +13,27 @@
     flex-direction: column;
     height: 100vh;
 }
+// <div class="profile">
+//             <p class="email"></p>
+//             <div class="img-profile"></div>
+//             <p class="msg">Hello <span class="msg-user"></span>!</p>
+//             <button>Manage your account</button>
+//         </div>
+
+.profile {
+    .email {
+        
+    }
+    .img-profile {
+
+    }
+    .msg {
+
+    }
+    button {
+
+    }
+}
 
 .operations {
     background: linear-gradient(to right, #A1C4FD, #C2E9FB);
@@ -91,7 +112,6 @@
 .content_draw {
     height: calc(100vh - 80px);
     overflow: hidden;
-    box-shadow: $box_shadow;
 }
 
 
