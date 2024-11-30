@@ -1,7 +1,1 @@
-// Build a GUI Draw App: https://youtu.be/y84tBZo8GFo?si=1GSKTVfKgrEzRjCA
-🐵 🙈 🙉 🙊
-
-
-// check the local storage in login.js
-
-
+// Write Post In Linkedin & Make A Video

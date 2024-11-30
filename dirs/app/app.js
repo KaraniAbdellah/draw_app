@@ -111,22 +111,15 @@ save_as_img.addEventListener("click", function () {
 
 // Manage User Profile
 
-// <div class="profile">
-//             <p class="email"></p>
-//             <div class="img-profile"></div>
-//             <p class="msg">Hello <span class="msg-user"></span>!</p>
-//             <button>Manage your account</button>
-//         </div>
-
 let char_name = document.querySelector(".profile-icon span");
 let profile = document.querySelector(".profile");
 let profile_icon = document.querySelector(".profile-icon");
 let email = document.querySelector(".profile .email");
 let img_profile = document.querySelector(".profile  .img-profile");
-let user_msg = document.querySelector(".profile .msg");
+let user_msg = document.querySelector(".profile .msg .msg-user");
 
 
-// get info
+// Get Info From LocalStorage
 document.addEventListener("DOMContentLoaded", function() {
     const MyInfo = JSON.parse(localStorage.getItem("PersonlInfo"));
     email.textContent = MyInfo.user_email;
