@@ -1,56 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Tech Buttons</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background: #f4f4f4;
-    }
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      font-weight: bold;
-      color: white;
-      background-color: #333;
-      border: none;
-      border-radius: 8px;
-      padding: 10px 20px;
-      margin: 10px;
-      cursor: pointer;
-      transition: transform 0.2s, background-color 0.2s;
-    }
-    .button:hover {
-      transform: scale(1.1);
-      background-color: #555;
-    }
-    .button-html { background-color: #f06529; }
-    .button-sass { background-color: #cf649a; }
-    .button-js { background-color: #f7df1e; color: #333; }
-    .button-canvas { background-color: #005bbb; }
-    .button-vscode { background-color: #007acc; }
-  </style>
-</head>
-<body>
-    <p>This is a drawing app built with:</p>
-    <button class="button button-html">HTML5</button>
-    <button class="button button-sass">SASS</button>
-    <button class="button button-js">JavaScript</button>
-    <button class="button button-canvas">Canvas API</button>
-    <button class="button button-vscode">VS Code</button>
-</body>
-</html>
+This is a Draw_App built with:
+
+[![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/)
 
 
+## images
 
-
-
+<img src="imgs/app-img/registration.png">
+<img src="imgs/app-img/login.png">
+<img src="imgs/app-img/app.png">
