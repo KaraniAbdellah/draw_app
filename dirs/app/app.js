@@ -134,8 +134,8 @@ profile_icon.addEventListener("click", function() {
 });
 
 profile.addEventListener("mouseleave", function() {
-    profile.classList.remove("block");
     profile.classList.add("hidden");
+    profile.classList.remove("block");
 });
 
 
