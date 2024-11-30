@@ -1,10 +1,14 @@
-## images
+# My Application
 
-<img src="imgs/app-img/registration.png" >
+## Overview  
+A simple app with user registration, login, and main interface.
 
-<img src="imgs/app-img/login.png" >
- 
-<img src="imgs/app-img/app.png" >
+## Screenshots  
+- **Registration**  
+  ![Registration](imgs/app-img/registration.png)
 
+- **Login**  
+  ![Login](imgs/app-img/login.png)
 
-
+- **App Interface**  
+  ![App](imgs/app-img/app.png)
