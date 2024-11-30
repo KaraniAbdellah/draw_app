@@ -1,1 +1,2 @@
 // Write Post In Linkedin & Make A Video
+// remove some images
