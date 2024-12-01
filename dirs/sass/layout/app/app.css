@@ -78,6 +78,12 @@ input:focus {
 .profile-icon:hover {
   outline: 4px solid #eee;
 }
+@media (max-width: 767px) {
+  .profile-icon {
+    right: 5px;
+    top: 25px;
+  }
+}
 
 .profile {
   position: absolute;
@@ -249,6 +255,20 @@ header .operations .btns .clear_canvas i {
 }
 header .operations .btns .save_as_img i {
   color: #5cabff;
+}
+@media (max-width: 767px) {
+  header {
+    width: 330px;
+  }
+  header .operations {
+    margin: 0 !important;
+  }
+  header .operations .colors button#color {
+    display: none;
+  }
+  header .operations .colors input#color {
+    display: block !important;
+  }
 }
 
 .content_draw {

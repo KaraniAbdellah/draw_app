@@ -29,6 +29,10 @@
     &:hover {
         outline: 4px solid #eee;
     }
+    @media (max-width: 767px) {
+        right: 5px;
+        top: 25px;
+    }
 }
 
 .profile {
@@ -159,6 +163,20 @@ header {
             }
             .clear_canvas i {color: $danger;}
             .save_as_img i {color: $save;}
+        }
+    }
+    @media (max-width: 767px) {
+        width: 330px;
+        .operations {
+            margin: 0 !important;
+            .colors {
+                button#color {
+                    display: none;
+                }
+                input#color {
+                    display: block !important;
+                }
+            }
         }
     }
 }
