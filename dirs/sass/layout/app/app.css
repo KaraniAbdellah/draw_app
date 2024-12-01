@@ -91,6 +91,7 @@ input:focus {
 }
 .profile .email {
   margin-bottom: 20px;
+  color: #323232;
 }
 .profile .img-profile {
   margin: 20px 0;
@@ -109,10 +110,11 @@ input:focus {
 .profile .msg {
   font-size: 18px;
   margin-bottom: 20px;
+  color: #323232;
 }
 .profile button {
   border-radius: 20px;
-  border: 1px solid black;
+  border: 1px solid #323232;
   font-weight: 600;
   font-size: 15px;
   padding: 10px;

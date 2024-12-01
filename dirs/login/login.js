@@ -20,9 +20,6 @@ login_btn.addEventListener("click", function() {
         user_email.classList.add("danger");
         user_password.classList.add("danger");
     } else {
-        // Add success Class
-        user_email.classList.add("success");
-        user_password.classList.add("success");
 
         // Login Verification
         const MyInfo = JSON.parse(localStorage.getItem("PersonlInfo"));
@@ -31,6 +28,12 @@ login_btn.addEventListener("click", function() {
         console.log(user_email, user_password);
         if (user_email.value == user_email_local && user_password_local == user_password.value) {
             window.location.href = "../../index.html";
+            // Add success Class
+            user_email.classList.add("success");
+            user_password.classList.add("success");
+        } else {
+            user_email.classList.add("danger");
+            user_password.classList.add("danger");
         }
     }
 });

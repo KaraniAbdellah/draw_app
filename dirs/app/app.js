@@ -20,6 +20,24 @@ const colorInput = document.querySelector("input#color");
 canvas.width = contentDraw.offsetWidth;
 canvas.height = contentDraw.offsetHeight;
 
+// Load saved canvas image and line size if available
+document.addEventListener("DOMContentLoaded", function () {
+    const savedImage = localStorage.getItem("canvasImage");
+    const savedLineSize = localStorage.getItem("lineSize");
+
+    if (savedImage) {
+        const img = new Image();
+        img.src = savedImage;
+        img.onload = function () {
+            ctx.drawImage(img, 0, 0);
+        };
+    }
+
+    if (savedLineSize) {
+        color_size.value = savedLineSize; // Restore line size
+    }
+});
+
 // Track the tool selected
 options.forEach(element => {
     element.addEventListener("click", () => {
@@ -54,11 +72,20 @@ colorInput.addEventListener("input", function () {
     color_name = colorInput.value;
 });
 
+// Save the line size when changed
+color_size.addEventListener("input", function () {
+    localStorage.setItem("lineSize", color_size.value); // Save the line size to localStorage
+});
+
 // Mouse events for drawing/erasing
 canvas.addEventListener("mousedown", () => (isDrawing = true));
 canvas.addEventListener("mouseup", () => {
     isDrawing = false;
     ctx.beginPath(); // Reset path after drawing
+
+    // Save the current canvas state to localStorage
+    const imgData = canvas.toDataURL("image/png");
+    localStorage.setItem("canvasImage", imgData);
 });
 canvas.addEventListener("mousemove", drawOrErase);
 
@@ -96,6 +123,8 @@ let save_as_img = document.querySelector(".save_as_img");
 // Clear the canvas
 clear_canvas.addEventListener("click", function () {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    localStorage.removeItem("canvasImage"); // Clear saved image from localStorage
+    localStorage.removeItem("lineSize"); // Clear saved line size from localStorage
 });
 
 // Save the canvas as an image
@@ -107,8 +136,6 @@ save_as_img.addEventListener("click", function () {
     link.click();
 });
 
-
-
 // Manage User Profile
 
 let char_name = document.querySelector(".profile-icon span");
@@ -117,7 +144,6 @@ let profile_icon = document.querySelector(".profile-icon");
 let email = document.querySelector(".profile .email");
 let img_profile = document.querySelector(".profile  .img-profile");
 let user_msg = document.querySelector(".profile .msg .msg-user");
-
 
 // Get Info From LocalStorage
 document.addEventListener("DOMContentLoaded", function() {
@@ -137,6 +163,3 @@ profile.addEventListener("mouseleave", function() {
     profile.classList.add("hidden");
     profile.classList.remove("block");
 });
-
-
-

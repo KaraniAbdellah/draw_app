@@ -42,6 +42,7 @@
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
     .email {
         margin-bottom: 20px;
+        color: $black;
     }
     .img-profile {
         margin: 20px 0;
@@ -56,10 +57,11 @@
     .msg {
         font-size: 18px; 
         margin-bottom: 20px;
+        color: $black;
     }
     button {
         border-radius: $border_radius + 15px;
-        border: 1px solid black;
+        border: 1px solid $black;
         font-weight: 600;
         font-size: 15px;
         padding: 10px;
