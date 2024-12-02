@@ -8,8 +8,9 @@ This is a Draw_App built with:
 
 
 
-## images
+## Images
 
 <img src="imgs/app-img/registration.png">
 <img src="imgs/app-img/login.png">
 <img src="imgs/app-img/app.png">
+

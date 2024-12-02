@@ -142,6 +142,12 @@ input:focus {
 .profile button.log_out:hover {
   background-color: rgba(255, 69, 58, 0.2);
 }
+@media (max-width: 767px) {
+  .profile {
+    top: 100px;
+    right: 14px;
+  }
+}
 
 header {
   display: flex;
