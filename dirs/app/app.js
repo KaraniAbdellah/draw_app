@@ -148,10 +148,17 @@ let user_msg = document.querySelector(".profile .msg .msg-user");
 // Get Info From LocalStorage
 document.addEventListener("DOMContentLoaded", function() {
     const MyInfo = JSON.parse(localStorage.getItem("PersonlInfo"));
-    email.textContent = MyInfo.user_email;
-    user_msg.textContent = MyInfo.user_name;
-    img_profile.textContent = MyInfo.user_email.charAt(0).toUpperCase();
-    char_name.textContent = MyInfo.user_email.charAt(0).toUpperCase();
+    if (MyInfo) {
+        email.textContent = MyInfo.user_email;
+        user_msg.textContent = MyInfo.user_name;
+        img_profile.textContent = MyInfo.user_email.charAt(0).toUpperCase();
+        char_name.textContent = MyInfo.user_email.charAt(0).toUpperCase();
+    } else {
+        email.textContent = "user@gamil.com";
+        user_msg.textContent = "John";
+        img_profile.textContent = "J";
+        char_name.textContent = "J";
+    }
 });
 
 profile_icon.addEventListener("click", function() {
